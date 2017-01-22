@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barcode debugger</title>
+    <script src="script.js"></script>
+    <style>
+        button {
+            font-size:150%;
+            display:inline-block;
+            width:100%;
+            height:75px;
+        }
+        textarea {
+            width:100%;
+            height:200px;
+        }
+        input {
+            font-size:150%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Barcode debugger</h1>
+
+<form name="keyform" id="keyform" onsubmit="return false">
+    <p>Input:<br>
+        <input id="kinput" type="text"><br>
+        Log:<br>
+        <textarea id="log" onfocus="this.blur()"></textarea><br>
+        <button onclick="logClear()">Clear</button></p></form>
+</body>
+</html>
