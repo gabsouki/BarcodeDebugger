@@ -2,6 +2,8 @@ var timer = 0
 
 window.onload = function(){
     document.getElementById('kinput').onkeydown = kdowntimer
+    document.getElementById('kinput').onkeyup = kdowntimer
+    document.getElementById('kinput').onkeypress = kdowntimer
 }
 
 function kdowntimer(e) {
@@ -9,12 +11,14 @@ function kdowntimer(e) {
     newtime = +new Date()
     time = newtime - timer
 
+    if (document.forms.keyform[e.type + 'Ignore'].checked) return
+
     logline = 'ms | Keycode:' + e.keyCode + ' | Character:' + String.fromCharCode(e.keyCode || e.charCode)
 
     if(timer==0) {
-        message = 0 + logline
+        message = e.type + ' | ' + 0 + logline
     } else {
-        message = time + logline
+        message = e.type + ' | ' + time + logline
     }
 
     var area = document.getElementById('log')
