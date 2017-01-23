@@ -22,7 +22,8 @@ function kdowntimer(e) {
     }
 
     var area = document.getElementById('log')
-    area.value+=message+'\n';area.scrollTop=area.scrollHeight
+    area.value += message+'\n'
+    area.scrollTop = area.scrollHeight
 
     timer = newtime
 

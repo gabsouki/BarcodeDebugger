@@ -18,11 +18,14 @@
     <style>
         body {
             margin: 10px;
-            height: 100%;
         }
-
         textarea {
-            font-size: 16px;
+            font-size: 10px !important;
+            max-height: 200px;
+        }
+        .col-xs-12 {
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -31,25 +34,22 @@
 <h1>Barcode debugger</h1>
 
 <form name="keyform" id="keyform" onsubmit="return false">
-    <div class="form-group">
-        <h4>Ignore events:</h4>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="keydownIgnore" value="1"> keydown
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="keypressIgnore" value="1" checked> keypress
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="keyupIgnore" value="1" checked> keyup
-        </label>
-        <br>
-        <h4>Input:</h4>
-        <input class="form-control input-lg" id="kinput" type="text">
-        <h4>Log:</h4>
-        <textarea rows="15" class="form-control" id="log" readonly></textarea>
-        <br>
-        <button class="btn btn-danger btn-lg" onclick="logClear()">Clear</button>
-    </div>
+    <h4>Ignore events:</h4>
+    <label class="checkbox-inline">
+        <input type="checkbox" id="keydownIgnore" value="1"> keydown
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" id="keypressIgnore" value="1" checked> keypress
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" id="keyupIgnore" value="1" checked> keyup
+    </label>
+    <br>
+    <h4>Input:</h4>
+    <input class="form-control input-lg col-xs-12" id="kinput" type="text">
+    <h4>Log:</h4>
+    <textarea rows="15" class="form-control col-xs-12" id="log"></textarea>
+    <button class="btn btn-danger btn-lg col-xs-12" onclick="logClear()">Clear</button>
 </form>
 </body>
 </html>
