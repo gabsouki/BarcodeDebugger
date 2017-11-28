@@ -8,4 +8,4 @@ Outputs:
  
 Made for troubleshooting web based apps that requires a barcode scanner input.
 
-It's available here: http://projects.faitque.tk/barcode
+~~It's available here: http://projects.faitque.tk/barcode~~
